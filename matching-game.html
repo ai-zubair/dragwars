@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <title>Desktop Dragging Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="gamestyle.css">
+    <script src="jq.js"></script>
+    <script src="TweenMax.min.js"></script>
+    <script src="Draggable.min.js"></script>    
+    <script src="matching-game.js"></script>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <div id="cont">
+            <div class="open-book left-page">
+
+            </div>
+            <div class="open-book right-page">
+
+            </div>
+        </div>
+        <div class="background">
+            <div class="title">
+                <span class="letter">T</span><span class="letter">H</span><span class="letter">E-</span><span class="letter">M</span><span class="letter">A</span><span class="letter">T</span><span class="letter">C</span><span class="letter">H</span><span class="letter">I</span><span class="letter">N</span><span class="letter">G-</span><span class="letter">G</span><span class="letter">A</span><span class="letter">M</span><span class="letter">E!</span>
+            </div>
+            <div class="instruction">
+                Drag the images on the left to their matches on the right.
+            </div>
+            <div class="gameBoard">
+                <!-- Start Draggable Images-->
+                <!--Here are the drop outside images-->
+                <div id="bigDirectional" class="image leftOutside firstRowTopPos dragItem"><img src="Directional_Blue.png"></div>
+                <div id="cloudDownload" class="image leftOutside secondRowTopPos dragItem"><img src="Cloud_Download_Blue.png"></div>
+                <div id="bigCursor" class="image leftOutside thirdRowTopPos dragItem"><img src="Cursor_Blue.png"></div>
+
+                <!--Here are the drop inside images-->
+                <div id="cloudUpload" class="image leftInside firstRowTopPos dragItem"><img src="Cloud_Upload_Blue.png"></div>
+                <div id="cloudTransfer" class="image leftInside secondRowTopPos dragItem"><img src="Cloud_Data_Transfer_Blue.png">
+                </div>
+                <div id="cloud" class="image leftInside thirdRowTopPos dragItem"><img src="Cloud_Blue.png"></div>
+
+                <!--End Draggable Images-->
+
+
+
+                <!--Start Target Images-->
+                <div id="cloudDrop" class="image rightOutside firstRowTopPos target"><img src="Cloud_Blue_Stroke.png"></div>
+                <div id="cloudTransferDrop" class="image rightOutside secondRowTopPos target"><img src="Cloud_Data_Transfer_Blue_Stroke.png"></div>
+                <div id="cloudUploadDrop" class="image rightOutside thirdRowTopPos target"><img src="Cloud_Upload_Blue_Stroke.png">
+                </div>
+
+                <!--Here are the drop inside images-->
+                <div id="bigCursorDrop" class="image rightInside firstRowTopPos target"><img src="Cursor_Blue_Stroke.png"></div>
+                <div id="cloudDownloadDrop" class="image rightInside secondRowTopPos target"><img src="Cloud_Download_Blue_Stroke.png"></div>
+                <div id="bigDirectionalDrop" class="image rightInside thirdRowTopPos target"><img src="Directional_Blue_Stroke.png"></div>
+
+                <!--End Target Images-->
+
+            </div>
+
+            <div class="modal">
+                <span>You Win!</span>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <div class="tryAgain">
+        <span>Try Again</span>
+    </div>
+
+    <div class="correct">
+        <span>Correct</span>
+    </div>
+</body>
+
+</html>
